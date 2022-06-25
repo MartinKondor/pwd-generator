@@ -13,13 +13,29 @@ import Footer from './Footer';
 const App = () => {
   const [pwd, setPwd] = useState("");
   const [length, setLength] = useState(16);
+  const [excluded, setExcluded] = useState("");
 
-  const generateNewPassword = event => {
+  const getRandomChar = (excluded) => {
+    const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+    let choosen = chars[Math.ceil(Math.random() * chars.length - 1)];
+    
+    // Randomly make it uppercase
+    if (Math.random() > 0.5) {
+      return choosen.toUpperCase();
+    }
+    return choosen;
+  }
+
+  const generateNewPassword = (event) => {
     event.preventDefault();
     let newPwd = "";
 
     for (let i = 0; i < length; i++) {
-      newPwd += Math.ceil(Math.random()*10 - 1);
+      if (i % 4 == 0 & i > 0) {
+        newPwd += "-";
+      }
+
+      newPwd += getRandomChar(excluded);
     }
   
     setPwd(newPwd);
@@ -38,10 +54,10 @@ const App = () => {
                 label="Generated Password"
                 value={pwd}
                 variant="filled"
-                disabled
                 fullWidth />
             </Box>
 
+            {/** 
             <Box mb={1}>
               <TextField
                 id="excluded-chrs"
@@ -49,6 +65,7 @@ const App = () => {
                 variant="standard"
                 fullWidth />
             </Box>
+            */}
 
           </FormControl>
 

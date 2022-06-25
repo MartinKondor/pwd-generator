@@ -1,12 +1,12 @@
 # 🎬 pwd-generator
 
 [![Project Status](https://img.shields.io/badge/status-active-brightgreen.svg)](https://github.com/MartinKondor/pwd-generator/)
-[![version](https://img.shields.io/badge/version-2022.06-brightgreen.svg)](https://github.com/MartinKondor/pwd-generator)
+[![version](https://img.shields.io/badge/version-v1.0-brightgreen.svg)](https://github.com/MartinKondor/pwd-generator)
 [![GitHub Issues](https://img.shields.io/github/issues/MartinKondor/pwd-generator.svg)](https://github.com/MartinKondor/pwd-generator/issues)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-blue.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-...
+Password generator made with React & Material UI.
 
 ## Contributing
 
